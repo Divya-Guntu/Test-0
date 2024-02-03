@@ -6,22 +6,33 @@ var typed= new Typed(".text", {
     loop: true
 });
 
-let section = document.querySelectorAll('section');
-let navLink = document.querySelectorAll('header nav a');
+var counterContainer = document.querySelector(".website-counter");
+var resetButton = document.querySelector("#reset");
+var visitCount = localStorage.getItem("page_view");
 
-window.onscroll = () => {
-    section.forEach(sec => {
-        let top =  window.scrollY;
-        let offset = sec.offsetTop;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribte('id');
+// Check if page_view entry is present
+if (visitCount) {
+  visitCount = Number(visitCount) + 1;
+  localStorage.setItem("page_view", visitCount);
+} else {
+  visitCount = 1;
+  localStorage.setItem("page_view", 1);
+}
+counterContainer.innerHTML = visitCount;
 
-        if(top >= offset && top < offset + height) {
-            navLink.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a [href*='+ id +']').classList.add
-                ('active');
-            });
-        };
-    });
-};
+// Adding onClick event listener
+resetButton.addEventListener("click", () => {
+  visitCount = 1;
+  localStorage.setItem("page_view", 1);
+  counterContainer.innerHTML = visitCount;
+});
+
+
+
+
+
+
+
+
+
+
