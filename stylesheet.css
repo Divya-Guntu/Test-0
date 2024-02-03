@@ -340,10 +340,10 @@ section{
     content: "85%";
 }
 .progress-line.python span::after{
-    content: "90%";
+    content: "40%";
 }
 .progress-line.react span::after{
-    content: "90%";
+    content: "80%";
 }
 .progress-line span::before{
     content: "";
@@ -653,6 +653,28 @@ section{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .contact{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -796,6 +818,16 @@ section{
     border-radius: 0.5rem;
 }
 
+.count span{
+    color:#0ef; 
+    
+}
+.website-counter{
+    margin-bottom:50px;
+    
+    
+
+}
 
 
 
@@ -808,6 +840,40 @@ section{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.testt
+  {
+    padding: 25px;
+    font-family: century;
+    font-size: 5mm;
+    text-align:justify;
+  }
+  .box{
+    width:250px;
+    height:250px;
+    margin-left: 50%;
+    border-radius:10px;
+    font-size: 20px;
+    box-shadow:0 0 5px blue,0 0 5px blue;
+    background-color: rgba(245, 222, 179, 0.041);
+    align-items: center;
+}
+.box:hover{
+    box-shadow:0 0 5px white,0 0 25px white,0 0 50px cyan,0 0 100px cyan,0 0 200px white;
+}
 
 
 
